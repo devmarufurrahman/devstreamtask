@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
@@ -59,55 +60,173 @@
         </LinearLayout>
     </RelativeLayout>
 
-    <!-- Credit Card Section -->
-    <LinearLayout
+
+    <HorizontalScrollView
         android:id="@+id/cardLayout"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:orientation="vertical"
-        android:background="@drawable/card_background"
-        android:padding="16dp"
-        android:elevation="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="36dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/greetingRow"
-        android:gravity="center">
+        android:scrollbars="none"
+        >
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="**** 3854"
-            android:textSize="18sp"
-            android:textColor="@color/white"
-            android:fontFamily="sans-serif-medium"/>
+            android:orientation="horizontal"
+            >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Due Date 10th Oct"
-            android:textSize="14sp"
-            android:textColor="@color/white"/>
+            <!-- Credit Card Section -->
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="190dp"
+                android:orientation="vertical"
+                android:background="@drawable/card_background"
+                android:backgroundTint="@color/black"
+                android:padding="16dp"
+                android:layout_marginEnd="15dp"
+                android:elevation="4dp"
+                >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="$5,001.86"
-            android:textSize="28sp"
-            android:textColor="@color/white"
-            android:fontFamily="sans-serif-bold"
-            android:layout_marginBottom="8dp"/>
+                <TextView
+                    android:id="@+id/cardTypeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Visa"
+                    android:layout_alignParentStart="true"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:fontFamily="sans-serif-medium"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="PAY"
-            android:backgroundTint="@color/white"
-            android:textColor="@color/black"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:elevation="4dp"/>
-    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="**** 3854"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/dueDateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/balanceText"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="5dp"
+                    android:text="Due Date 10th Oct"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/balanceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="$5,001.86"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="10dp"
+                    android:backgroundTint="@color/white"
+                    android:elevation="4dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:text="PAY"
+                    android:textColor="@color/black" />
+
+
+            </RelativeLayout>
+
+
+            <!-- Credit Card Section2 -->
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="190dp"
+                android:orientation="vertical"
+                android:background="@drawable/card_background"
+                android:padding="16dp"
+                android:layout_marginEnd="15dp"
+                android:elevation="4dp"
+                >
+
+                <TextView
+                    android:id="@+id/cardTypeText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Visa"
+                    android:layout_alignParentStart="true"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="**** 3854"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/dueDateText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/balanceText2"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="5dp"
+                    android:text="Due Date 10th Oct"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/balanceText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="$5,001.86"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="10dp"
+                    android:backgroundTint="@color/white"
+                    android:elevation="4dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:text="PAY"
+                    android:textColor="@color/black" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
+
 
     <!-- Bill Payments Section Title -->
     <TextView
@@ -118,41 +237,155 @@
         android:textSize="18sp"
         android:textColor="@color/black"
         android:fontFamily="sans-serif-medium"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="34dp"
         app:layout_constraintTop_toBottomOf="@id/cardLayout"
         app:layout_constraintStart_toStartOf="parent"/>
 
-    <!-- Bill Payment Icons Row -->
-    <LinearLayout
+
+    <HorizontalScrollView
         android:id="@+id/billPaymentsIcons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minHeight="50dp"
         android:orientation="horizontal"
-        android:gravity="center"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/billPaymentsTitle">
+        app:layout_constraintTop_toBottomOf="@id/billPaymentsTitle"
+        android:scrollbars="none"
+        >
 
-        <!-- Bill Payment Icon Example (Repeat for each icon) -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:orientation="horizontal"
+            >
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_electricity"
-                app:tint="@color/black"/>
-
-            <TextView
-                android:layout_width="wrap_content"
+            <!-- Bill Payment Icons Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Electricity Bill"
-                android:textSize="12sp"
-                android:gravity="center_horizontal"/>
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <!-- Bill Payment Icon Example (Repeat for each icon) -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/ic_electricity"
+                        android:background="@color/imgBgColor"
+                        android:padding="10dp"
+                        app:tint="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Electricity Bill"
+                        android:textSize="12sp"
+                        android:gravity="center_horizontal"/>
+
+                </LinearLayout>
+
+
+
+                <!-- Bill Payment Icon Example (Repeat for each icon) -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/ic_electricity"
+                        android:background="@color/imgBgColor"
+                        android:padding="10dp"
+                        app:tint="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Electricity Bill"
+                        android:textSize="12sp"
+                        android:gravity="center_horizontal"/>
+
+                </LinearLayout>
+
+
+
+                <!-- Bill Payment Icon Example (Repeat for each icon) -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/ic_electricity"
+                        android:background="@color/imgBgColor"
+                        android:padding="10dp"
+                        app:tint="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Electricity Bill"
+                        android:textSize="12sp"
+                        android:gravity="center_horizontal"/>
+
+                </LinearLayout>
+
+
+
+                <!-- Bill Payment Icon Example (Repeat for each icon) -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_electricity"
+                        android:background="@color/imgBgColor"
+                        app:tint="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Electricity Bill"
+                        android:textSize="12sp"
+                        android:gravity="center_horizontal"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
         </LinearLayout>
-    </LinearLayout>
+
+
+
+    </HorizontalScrollView>
+
 
     <!-- Active Loans Section Title -->
     <TextView
@@ -163,40 +396,61 @@
         android:textSize="18sp"
         android:textColor="@color/black"
         android:fontFamily="sans-serif-medium"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintTop_toBottomOf="@id/billPaymentsIcons"
         app:layout_constraintStart_toStartOf="parent"/>
 
-    <!-- Active Loans Details Card -->
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="80dp"
-        android:orientation="vertical"
-        android:background="@drawable/loan_card_background"
-        android:padding="16dp"
-        android:elevation="8dp"
-        app:layout_constraintTop_toBottomOf="@id/activeLoansTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:gravity="center_vertical"
-        android:layout_marginTop="8dp">
 
-        <TextView
+    <!-- Active Loans Details Card -->
+
+
+    <TextView
+        android:id="@+id/seeAllLoans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="30dp"
+        android:text="See All"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/activeLoansTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/activeLoansTitle"
+        app:layout_constraintTop_toBottomOf="@id/billPaymentsIcons" />
+
+
+    <HorizontalScrollView
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:scrollbars="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activeLoansTitle">
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="$399/M"
-            android:textSize="18sp"
-            android:textColor="@color/black"
-            android:fontFamily="sans-serif-medium"/>
+            android:orientation="horizontal">
 
-        <ProgressBar
-            android:layout_width="0dp"
-            android:layout_height="8dp"
-            android:layout_weight="2"
-            android:progress="48"
-            android:progressTint="@color/primaryColor"
-            android:layout_marginTop="8dp"/>
-    </LinearLayout>
+            <include layout="@layout/active_loan_ui" />
+
+            <include
+                layout="@layout/active_loan_ui" />
+
+            <include
+                layout="@layout/active_loan_ui" />
+
+            <include
+                layout="@layout/active_loan_ui" />
+
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
+
 
     <!-- Bottom Navigation Bar -->
     <LinearLayout
