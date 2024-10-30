@@ -7,7 +7,10 @@
     <color name="primaryColor">#4A90E2</color>
     <color name="transparent">#00000000</color>
     <color name="gray">#F5F2F2</color>
-
+    <color name="lightGray">#B7FFF6F6</color>
+    <color name="darkGray">#333333</color>
+    <color name="purple">#7D3C98</color>
+    <color name="blue">#1E4BD0</color>
 
 
 </resources>

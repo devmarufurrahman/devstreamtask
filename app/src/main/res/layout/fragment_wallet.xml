@@ -1,14 +1,397 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".WalletFragment">
+<!-- fragment_wallet.xml -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="@color/backgroundColor">
 
-</FrameLayout>
+        <!-- AppBar with Toolbar -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                app:navigationIcon="@drawable/ic_back"
+                app:title="Wallet"
+                app:titleTextAppearance="@style/ToolbarTitleText"
+                app:titleTextColor="@color/black"
+                app:contentInsetStartWithNavigation="0dp">
+
+                <!-- Profile Icon at the end of Toolbar -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_profile"
+                    android:layout_marginEnd="15dp"
+                    android:layout_gravity="end"
+                    android:contentDescription="@string/profile_icon" />
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- Spend Chart Title -->
+        <TextView
+            android:id="@+id/spendChartSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This month"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/appBar"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/spendChartTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spend Chart"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/spendChartSubTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="4dp" />
+
+        <!-- Placeholder for Spend Chart -->
+<!--        <View-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="180dp"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/spendChartTitle"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:background="@color/gray" />-->
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/spendChart"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            app:layout_constraintTop_toBottomOf="@id/spendChartTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            />
+
+        <!-- Breakdown Section -->
+        <TextView
+            android:id="@+id/breakdownTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Breakdown"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-medium"
+            app:layout_constraintTop_toBottomOf="@id/spendChart"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <LinearLayout
+            android:id="@+id/breakdownSection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/breakdownTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/oval_shape"
+                    android:elevation="5dp"
+                    android:paddingVertical="15dp"
+                    android:paddingHorizontal="11dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="45%"
+                    android:textSize="14sp"
+                    android:textColor="@color/purple"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Food &amp; Drinks"
+                    android:textSize="12sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/oval_shape"
+                    android:elevation="5dp"
+                    android:paddingVertical="15dp"
+                    android:paddingHorizontal="11dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="45%"
+                    android:textSize="14sp"
+                    android:textColor="@color/purple"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dresses"
+                    android:textSize="12sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/oval_shape"
+                    android:elevation="5dp"
+                    android:paddingVertical="15dp"
+                    android:paddingHorizontal="11dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="45%"
+                    android:textSize="14sp"
+                    android:textColor="@color/purple"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transport"
+                    android:textSize="12sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/oval_shape"
+                    android:elevation="5dp"
+                    android:paddingVertical="15dp"
+                    android:paddingHorizontal="11dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="45%"
+                    android:textSize="14sp"
+                    android:textColor="@color/purple"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Others"
+                    android:textSize="12sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!-- Card Details Section -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDetailsSection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxHeight="300dp"
+            android:orientation="vertical"
+            android:background="@drawable/card_info_background"
+            app:contentPadding="10dp"
+            app:cardUseCompatPadding="false"
+            app:cardCornerRadius="10dp"
+            android:elevation="4dp"
+            app:layout_constraintTop_toBottomOf="@id/breakdownSection"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <LinearLayout
+                    android:id="@+id/layout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center"
+                    android:weightSum="3"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Account Number: "
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:background="@drawable/field_shape"
+                        android:gravity="end"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:gravity="center"
+                            android:text="@string/_2255_4595_9874_4423" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/layout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/layout1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginVertical="7dp"
+                    android:gravity="center"
+                    android:weightSum="3"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Passwprd: "
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:background="@drawable/field_shape"
+                        android:gravity="end"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="********" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/layout2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginVertical="5dp"
+                    android:gravity="start"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Exp. Date: 12/24  \n\n   CCV: 134"
+                        android:textSize="14sp"
+                        android:layout_gravity="start"
+                        android:layout_marginEnd="30dp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="8dp" />
+
+
+                    <Button
+                        android:id="@+id/deleteCardButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Delete Card"
+                        android:backgroundTint="@color/blue"
+                        android:layout_marginStart="50dp"
+                        android:textColor="@color/white"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="8dp" />
+
+
+                </LinearLayout>
+
+                <!-- Skip Button -->
+                <Button
+                    android:id="@+id/skipButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SKIP"
+                    android:backgroundTint="@color/blue"
+                    android:textColor="@color/white"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/layout3"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

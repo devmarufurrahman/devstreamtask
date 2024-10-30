@@ -1,14 +1,216 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SearchFragment">
+<!-- fragment_search.xml -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="@color/backgroundColor">
 
-</FrameLayout>
+        <!-- AppBar with Toolbar -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:contentInsetStartWithNavigation="0dp"
+                app:navigationIcon="@drawable/ic_back"
+                app:title="Search"
+                app:titleTextAppearance="@style/ToolbarTitleText"
+                app:titleTextColor="@color/black" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- Time Period Selector -->
+        <LinearLayout
+            android:id="@+id/timePeriodSelector"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/appBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="10dp">
+
+            <!-- Time Period Buttons -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1W"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:layout_marginEnd="10dp"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-medium"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1M"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:layout_marginEnd="10dp"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3M"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:layout_marginEnd="10dp"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6M"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:layout_marginEnd="10dp"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-medium"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1Y"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:layout_marginEnd="10dp"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ALL"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-medium"/>
+
+
+        </LinearLayout>
+
+        <!-- Line Chart Placeholder -->
+        <View
+            android:id="@+id/lineChart"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/timePeriodSelector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/gray" /> <!-- Replace with actual chart implementation -->
+
+        <!-- Spending Summary Card -->
+        <RelativeLayout
+            android:id="@+id/spendingSummaryCard"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:orientation="horizontal"
+            android:background="@drawable/summary_card_background"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/lineChart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Total Spendings"
+                    android:textColor="@color/gray"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="$5,001.86"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/button"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="1dp"
+                android:fontFamily="sans-serif"
+                android:text="Due Date 10th Oct"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:backgroundTint="@color/primaryColor"
+                android:fontFamily="sans-serif-medium"
+                android:text="PAY EARLY"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <!-- Recent Products Section -->
+        <TextView
+            android:id="@+id/recentProductsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recent Products"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/spendingSummaryCard"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <!-- RecyclerView for Recent Products -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recentProductsRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/recentProductsTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

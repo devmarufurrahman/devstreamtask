@@ -51,4 +51,11 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+//    chart dependency
+    implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
+//    gson dependency
+    implementation ("com.google.code.gson:gson:2.10.1")
+
 }
