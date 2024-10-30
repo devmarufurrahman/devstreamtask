@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@color/backgroundColor">
+    android:background="@color/transparent">
 
     <!-- Greeting and Icons Row -->
     <RelativeLayout
@@ -451,22 +450,6 @@
 
     </HorizontalScrollView>
 
-
-    <!-- Bottom Navigation Bar -->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavView"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:background="@color/white"
-        android:elevation="5dp"
-        app:labelVisibilityMode="labeled"
-        app:itemActiveIndicatorStyle="@style/BottomNavItemActiveIndicatorStyle"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:itemPaddingTop="5dp"
-        app:itemTextColor="@color/black"
-        app:itemIconTint="@color/black"
-        app:menu="@menu/bottom_menu"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

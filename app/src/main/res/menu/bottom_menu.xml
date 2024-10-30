@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home_menu"
+        android:title="Home"
+        android:icon="@drawable/ic_home"
+        />
+
+    <item
+        android:id="@+id/search_menu"
+        android:title="Search"
+        android:icon="@drawable/search_icon"
+        />
+
+    <item
+        android:id="@+id/wallet_menu"
+        android:title="Wallet"
+        android:icon="@drawable/wallet"
+        />
+
+</menu>
