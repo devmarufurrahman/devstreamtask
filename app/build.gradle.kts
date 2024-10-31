@@ -78,4 +78,8 @@ dependencies {
     // Kotlin extensions and Coroutines support for Room
     implementation ("androidx.room:room-ktx:2.6.1")
 
+//    for shimmer effect
+    implementation ("com.facebook.shimmer:shimmer:0.5.0")
+
+
 }

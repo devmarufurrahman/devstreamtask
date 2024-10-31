@@ -11,6 +11,7 @@
     <color name="darkGray">#333333</color>
     <color name="purple">#7D3C98</color>
     <color name="blue">#1E4BD0</color>
+    <color name="shimmer_placeholder">#E0E0E0</color>
 
 
 </resources>

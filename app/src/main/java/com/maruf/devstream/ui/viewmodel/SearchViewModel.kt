@@ -25,7 +25,7 @@ class SearchViewModel(context: Context) : ViewModel() {
         fetchProducts()
     }
 
-    private fun fetchProducts() {
+    fun fetchProducts() {
         viewModelScope.launch {
             val productList = repository.fetchProducts()
             _products.value = productList

@@ -43,15 +43,24 @@ class SearchFragment : Fragment() {
         }
 
 
+        // Set up RecyclerView
         productAdapter = ProductAdapter(emptyList())
         binding.recentProductsRecyclerView.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = productAdapter
         }
 
+        // Show initial shimmer effect while loading
+        productAdapter.setLoading(true)
+
+        // Observe product data
         viewModel.products.observe(viewLifecycleOwner) { products ->
-            productAdapter.updateProducts(products)
+            if (products.isNotEmpty()) {
+                productAdapter.updateProducts(products)
+            }
         }
+
+
 
         // Observe chart data and update the chart when data is available
         viewModel.chartData.observe(viewLifecycleOwner) { chartData ->
