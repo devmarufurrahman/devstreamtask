@@ -54,7 +54,7 @@
                 android:id="@+id/button1W"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1W"
+                android:text="@string/_1w"
                 android:paddingVertical="7dp"
                 android:paddingHorizontal="12dp"
                 android:background="@drawable/time_period_shape"
@@ -67,7 +67,7 @@
                 android:id="@+id/button1M"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1M"
+                android:text="@string/_1m"
                 android:paddingVertical="7dp"
                 android:paddingHorizontal="12dp"
                 android:textColor="@color/black"
@@ -79,7 +79,7 @@
                 android:id="@+id/button3M"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3M"
+                android:text="@string/_3m"
                 android:paddingVertical="7dp"
                 android:paddingHorizontal="12dp"
                 android:textColor="@color/black"
@@ -91,7 +91,7 @@
                 android:id="@+id/button6M"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="6M"
+                android:text="@string/_6m"
                 android:paddingVertical="7dp"
                 android:paddingHorizontal="12dp"
                 android:textColor="@color/black"
@@ -103,7 +103,7 @@
                 android:id="@+id/button1Y"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1Y"
+                android:text="@string/_1y"
                 android:paddingVertical="7dp"
                 android:paddingHorizontal="12dp"
                 android:textColor="@color/black"
@@ -115,7 +115,7 @@
                 android:id="@+id/buttonALL"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ALL"
+                android:text="@string/all"
                 android:paddingVertical="7dp"
                 android:paddingHorizontal="12dp"
                 android:textColor="@color/black"
@@ -160,7 +160,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif"
-                    android:text="Total Spendings"
+                    android:text="@string/total_spendings"
                     android:textColor="@color/gray"
                     android:layout_marginBottom="10dp"
                     android:textSize="14sp" />
@@ -169,7 +169,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
-                    android:text="$5,001.86"
+                    android:text="@string/_5_001_86"
                     android:textColor="@color/white"
                     android:textSize="24sp" />
             </LinearLayout>
@@ -184,7 +184,7 @@
                 android:layout_marginEnd="14dp"
                 android:layout_marginBottom="1dp"
                 android:fontFamily="sans-serif"
-                android:text="Due Date 10th Oct"
+                android:text="@string/due_date_10th_oct"
                 android:textColor="@color/gray"
                 android:textSize="12sp" />
 
@@ -196,7 +196,7 @@
                 android:layout_alignParentBottom="true"
                 android:backgroundTint="@color/primaryColor"
                 android:fontFamily="sans-serif-medium"
-                android:text="PAY EARLY"
+                android:text="@string/pay_early"
                 android:textColor="@color/white" />
         </RelativeLayout>
 
@@ -205,7 +205,7 @@
             android:id="@+id/recentProductsTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Recent Products"
+            android:text="@string/recent_products"
             android:textSize="18sp"
             android:textColor="@color/black"
             android:textStyle="bold"

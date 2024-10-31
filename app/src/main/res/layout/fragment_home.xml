@@ -99,7 +99,7 @@
                     android:id="@+id/cardTypeText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Visa"
+                    android:text="@string/visa"
                     android:layout_alignParentStart="true"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -113,7 +113,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="10dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="**** 3854"
+                    android:text="@string/_3854"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
 
@@ -149,7 +149,7 @@
                     android:elevation="4dp"
                     android:paddingStart="20dp"
                     android:paddingEnd="20dp"
-                    android:text="PAY"
+                    android:text="@string/pay"
                     android:textColor="@color/black" />
 
 
@@ -171,7 +171,7 @@
                     android:id="@+id/cardTypeText2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Visa"
+                    android:text="@string/visa"
                     android:layout_alignParentStart="true"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -185,7 +185,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="10dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="**** 3854"
+                    android:text="@string/_3854"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
 
@@ -196,7 +196,7 @@
                     android:layout_above="@+id/balanceText2"
                     android:layout_alignParentStart="true"
                     android:layout_marginBottom="5dp"
-                    android:text="Due Date 10th Oct"
+                    android:text="@string/due_date_10th_oct"
                     android:textColor="@color/white"
                     android:textSize="14sp" />
 
@@ -205,7 +205,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:text="$5,001.86"
+                    android:text="@string/_5_001_86"
                     android:textColor="@color/white"
                     android:textSize="22sp"
                     android:textStyle="bold"
@@ -221,7 +221,7 @@
                     android:elevation="4dp"
                     android:paddingStart="20dp"
                     android:paddingEnd="20dp"
-                    android:text="PAY"
+                    android:text="@string/pay"
                     android:textColor="@color/black" />
 
 
@@ -238,7 +238,7 @@
         android:id="@+id/billPaymentsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bill Payments"
+        android:text="@string/bill_payments"
         android:textSize="18sp"
         android:textColor="@color/black"
         android:fontFamily="sans-serif-medium"
@@ -284,6 +284,7 @@
                     <ImageView
                         android:layout_width="45dp"
                         android:layout_height="45dp"
+                        android:contentDescription="@string/img"
                         android:src="@drawable/ic_electricity"
                         android:background="@color/imgBgColor"
                         android:padding="10dp"
@@ -292,7 +293,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Electricity Bill"
+                        android:text="@string/electricity_bill"
                         android:textSize="12sp"
                         android:gravity="center_horizontal"/>
 
@@ -397,7 +398,7 @@
         android:id="@+id/activeLoansTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Active Loans"
+        android:text="@string/active_loans"
         android:textSize="18sp"
         android:textColor="@color/black"
         android:fontFamily="sans-serif-medium"
@@ -415,7 +416,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="184dp"
         android:layout_marginTop="30dp"
-        android:text="See All"
+        android:text="@string/see_all"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/activeLoansTitle"

@@ -19,6 +19,6 @@ class HomeViewModel : ViewModel() {
         // Initialize with default values
         _greetingText.value = "✌️ Hey George!"
         _cardBalance.value = "$5,001.86"
-        _dueDateText.value = "Due Date 10th Oct"
+        _dueDateText.value = "@string/due_date_10th_oct"
     }
 }

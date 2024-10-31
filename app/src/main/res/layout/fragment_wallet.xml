@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 app:navigationIcon="@drawable/ic_back"
-                app:title="Wallet"
+                app:title="@string/wallet"
                 app:titleTextAppearance="@style/ToolbarTitleText"
                 app:titleTextColor="@color/black"
                 app:contentInsetStartWithNavigation="0dp">
