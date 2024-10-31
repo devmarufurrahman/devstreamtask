@@ -72,4 +72,10 @@ dependencies {
     // AndroidX Lifecycle ViewModel
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
 
+//    room database
+    implementation ("androidx.room:room-runtime:2.6.1")
+    kapt ("androidx.room:room-compiler:2.6.1")
+    // Kotlin extensions and Coroutines support for Room
+    implementation ("androidx.room:room-ktx:2.6.1")
+
 }

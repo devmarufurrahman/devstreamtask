@@ -1,7 +1,11 @@
 package com.maruf.devstream.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "products")
 data class Product(
-    val id: Int,
+    @PrimaryKey val id: Int,
     val title: String,
     val price: Double,
     val image: String,
@@ -11,7 +15,4 @@ data class Product(
         val rate: Double,
         val count: Int
     )
-
-    // Convert to Product for use in RecyclerView
-    fun toProduct() = Product(id, title, price, image, rating)
 }

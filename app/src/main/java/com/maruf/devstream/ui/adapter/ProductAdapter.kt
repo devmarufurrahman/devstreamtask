@@ -1,4 +1,4 @@
-package com.maruf.devstream.adapter
+package com.maruf.devstream.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

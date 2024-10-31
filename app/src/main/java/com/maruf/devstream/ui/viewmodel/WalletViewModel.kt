@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.maruf.devstream.repository.WalletRepository
+import com.maruf.devstream.data.repository.WalletRepository
 
 class WalletViewModel(application: Application) : AndroidViewModel(application) {
 

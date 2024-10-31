@@ -1,7 +1,6 @@
-package com.maruf.devstream.network
+package com.maruf.devstream.data.remote
 
 import com.maruf.devstream.model.Product
-import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.GET
 

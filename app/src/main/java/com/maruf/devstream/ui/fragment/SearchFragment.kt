@@ -1,7 +1,6 @@
 package com.maruf.devstream.ui.fragment
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,30 +8,17 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.formatter.ValueFormatter
-import com.maruf.devstream.model.Product
-import com.maruf.devstream.adapter.ProductAdapter
-import com.maruf.devstream.network.ProductApi
+import com.maruf.devstream.ui.adapter.ProductAdapter
 import com.maruf.devstream.R
 import com.maruf.devstream.databinding.FragmentSearchBinding
-import com.maruf.devstream.repository.SearchRepository
 import com.maruf.devstream.ui.viewmodel.SearchViewModel
 import org.json.JSONObject
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-import java.io.InputStream
 
 
 class SearchFragment : Fragment() {
@@ -56,14 +42,13 @@ class SearchFragment : Fragment() {
             parentFragmentManager.popBackStack()
         }
 
-        // Set up RecyclerView for products
+
         productAdapter = ProductAdapter(emptyList())
         binding.recentProductsRecyclerView.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = productAdapter
         }
 
-        // Observe product list changes
         viewModel.products.observe(viewLifecycleOwner) { products ->
             productAdapter.updateProducts(products)
         }

@@ -1,4 +1,4 @@
-package com.maruf.devstream.repository
+package com.maruf.devstream.data.repository
 
 import android.content.Context
 import com.maruf.devstream.R
