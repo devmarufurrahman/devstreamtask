@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- fragment_search.xml -->
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="viewModel"
+            type="com.maruf.devstream.ui.viewmodel.SearchViewModel" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -32,84 +37,6 @@
         </com.google.android.material.appbar.AppBarLayout>
 
         <!-- Time Period Selector -->
-<!--        <LinearLayout-->
-<!--            android:id="@+id/timePeriodSelector"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="horizontal"-->
-<!--            android:gravity="center"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/appBar"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            android:layout_margin="10dp"-->
-<!--            >-->
-
-<!--            &lt;!&ndash; Time Period Buttons &ndash;&gt;-->
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="1W"-->
-<!--                android:padding="8dp"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:layout_marginEnd="10dp"-->
-<!--                android:textSize="12sp"-->
-<!--                android:fontFamily="sans-serif-medium"-->
-<!--                />-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="1M"-->
-<!--                android:padding="8dp"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:layout_marginEnd="10dp"-->
-<!--                android:textSize="12sp"-->
-<!--                android:fontFamily="sans-serif-medium"/>-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="3M"-->
-<!--                android:padding="8dp"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:layout_marginEnd="10dp"-->
-<!--                android:textSize="12sp"-->
-<!--                android:fontFamily="sans-serif-medium"/>-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="6M"-->
-<!--                android:padding="8dp"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:layout_marginEnd="10dp"-->
-<!--                android:textSize="12sp"-->
-<!--                android:fontFamily="sans-serif-medium"/>-->
-
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="1Y"-->
-<!--                android:padding="8dp"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:layout_marginEnd="10dp"-->
-<!--                android:textSize="12sp"-->
-<!--                android:fontFamily="sans-serif-medium"/>-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="ALL"-->
-<!--                android:padding="8dp"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="12sp"-->
-<!--                android:fontFamily="sans-serif-medium"/>-->
-
-
-<!--        </LinearLayout>-->
-
-        <!-- Time Period Selector -->
         <LinearLayout
             android:id="@+id/timePeriodSelector"
             android:layout_width="match_parent"
@@ -119,8 +46,7 @@
             app:layout_constraintTop_toBottomOf="@id/appBar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="10dp"
-            >
+            android:layout_margin="10dp">
 
             <!-- Time Period Buttons -->
             <TextView
@@ -196,7 +122,6 @@
                 android:fontFamily="sans-serif-medium"/>
         </LinearLayout>
 
-
         <!-- Line Chart Placeholder -->
         <com.github.mikephil.charting.charts.LineChart
             android:id="@+id/lineChart"
@@ -205,18 +130,7 @@
             android:layout_marginTop="10dp"
             app:layout_constraintTop_toBottomOf="@id/timePeriodSelector"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            />
-
-<!--        <View-->
-<!--            android:id="@+id/lineChart"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="200dp"-->
-<!--            android:layout_marginTop="10dp"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/timePeriodSelector"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            android:background="@color/gray" /> -->
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <!-- Spending Summary Card -->
         <RelativeLayout
@@ -229,8 +143,7 @@
             android:layout_marginTop="16dp"
             app:layout_constraintTop_toBottomOf="@id/lineChart"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            >
+            app:layout_constraintEnd_toEndOf="parent">
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
@@ -259,7 +172,6 @@
                     android:textColor="@color/white"
                     android:textSize="24sp" />
             </LinearLayout>
-
 
             <TextView
                 android:layout_width="wrap_content"
@@ -310,9 +222,7 @@
             android:overScrollMode="never"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/recentProductsTitle"
-            />
-
+            app:layout_constraintTop_toBottomOf="@id/recentProductsTitle" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

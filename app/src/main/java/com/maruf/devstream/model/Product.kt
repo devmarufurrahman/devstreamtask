@@ -1,4 +1,4 @@
-package com.maruf.devstream
+package com.maruf.devstream.model
 
 data class Product(
     val id: Int,
