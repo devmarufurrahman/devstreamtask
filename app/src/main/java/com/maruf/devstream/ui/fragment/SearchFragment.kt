@@ -1,4 +1,4 @@
-package com.maruf.devstream
+package com.maruf.devstream.ui.fragment
 
 import android.os.Bundle
 import android.util.Log
@@ -17,6 +17,10 @@ import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.formatter.ValueFormatter
+import com.maruf.devstream.Product
+import com.maruf.devstream.ProductAdapter
+import com.maruf.devstream.ProductApi
+import com.maruf.devstream.R
 import com.maruf.devstream.databinding.FragmentSearchBinding
 import org.json.JSONObject
 import retrofit2.Call
@@ -101,10 +105,14 @@ class SearchFragment : Fragment() {
         button?.apply {
             timePeriodButtons.forEach { buttonBg ->
                 if (buttonBg == button){
-                    buttonBg.background = ContextCompat.getDrawable(requireContext(), R.drawable.time_period_shape)
+                    buttonBg.background = ContextCompat.getDrawable(requireContext(),
+                        R.drawable.time_period_shape
+                    )
                     buttonBg.setTextColor(ContextCompat.getColor(requireContext(), R.color.white))
                 }else{
-                    buttonBg.background = ContextCompat.getDrawable(requireContext(), R.drawable.oval_shape)
+                    buttonBg.background = ContextCompat.getDrawable(requireContext(),
+                        R.drawable.oval_shape
+                    )
                     buttonBg.setTextColor(ContextCompat.getColor(requireContext(), R.color.black))
                 }
 

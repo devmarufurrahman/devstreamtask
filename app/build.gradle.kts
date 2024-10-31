@@ -65,4 +65,10 @@ dependencies {
 //    retrofit
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
 
+    // AndroidX Fragment KTX for viewModels
+    implementation ("androidx.fragment:fragment-ktx:1.3.6")
+
+    // AndroidX Lifecycle ViewModel
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
+
 }

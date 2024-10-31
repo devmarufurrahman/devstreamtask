@@ -1,4 +1,4 @@
-package com.maruf.devstream
+package com.maruf.devstream.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,6 +13,7 @@ import com.github.mikephil.charting.data.BarData
 import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BarEntry
 import com.github.mikephil.charting.formatter.ValueFormatter
+import com.maruf.devstream.R
 import com.maruf.devstream.databinding.FragmentWalletBinding
 import org.json.JSONObject
 import java.io.InputStream
