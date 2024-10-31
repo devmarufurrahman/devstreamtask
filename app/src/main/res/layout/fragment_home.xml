@@ -312,7 +312,7 @@
                     <ImageView
                         android:layout_width="45dp"
                         android:layout_height="45dp"
-                        android:src="@drawable/ic_electricity"
+                        android:src="@drawable/internet_recharge"
                         android:background="@color/imgBgColor"
                         android:padding="10dp"
                         app:tint="@color/black"/>
@@ -320,7 +320,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Electricity Bill"
+                        android:text="@string/internet_n_recharge"
                         android:textSize="12sp"
                         android:gravity="center_horizontal"/>
 
@@ -340,7 +340,7 @@
                     <ImageView
                         android:layout_width="45dp"
                         android:layout_height="45dp"
-                        android:src="@drawable/ic_electricity"
+                        android:src="@drawable/tv_bill"
                         android:background="@color/imgBgColor"
                         android:padding="10dp"
                         app:tint="@color/black"/>
@@ -348,7 +348,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Electricity Bill"
+                        android:text="@string/cable_bill"
                         android:textSize="12sp"
                         android:gravity="center_horizontal"/>
 
@@ -368,14 +368,14 @@
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/ic_electricity"
+                        android:src="@drawable/mobile_recharge"
                         android:background="@color/imgBgColor"
                         app:tint="@color/black"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Electricity Bill"
+                        android:text="Mobile Bill"
                         android:textSize="12sp"
                         android:gravity="center_horizontal"/>
 

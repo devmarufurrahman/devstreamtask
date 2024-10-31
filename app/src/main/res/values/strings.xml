@@ -4,4 +4,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="profile_icon">profile_icon</string>
     <string name="_2255_4595_9874_4423">2255 4595 9874 4423</string>
+    <string name="internet_n_recharge">Internet \n Recharge</string>
+    <string name="cable_bill">Cable Bill</string>
 </resources>
